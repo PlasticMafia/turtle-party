@@ -2,6 +2,8 @@
 # by River Moon
 # 02.02.2024
 import turtle
+turtle.speed(0)
+
 turtle.color("blue")
 
 def back(len):
@@ -24,6 +26,17 @@ def spiral(len, angle):
     turtle.right(angle)
     
 spiral(75, 45)
-move(50)
+move(150)
 turtle.color("red")
 spiral(50, 90)
+back(150)
+turtle.color("turquoise")
+polygon(8, 45)
+
+move(150)
+turtle.color("hotpink")
+for n in range(3, 10):
+  move(50) #forward
+  polygon(n, 100 / n)
+  back(50)
+  turtle.right(360 / 7)
